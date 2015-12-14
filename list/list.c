@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
+#define MAX_EL 5
 
 int main() {
   char first_element[] = "String0";

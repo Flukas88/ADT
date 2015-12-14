@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define MAX_EL 5
 #define STRING_SIZE 6
 
 typedef enum {ERROR=-1, OK=0} status;
