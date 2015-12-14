@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifndef STRING_SIZE        /* Allow "cc -D" to override definition */
 #define STRING_SIZE 6
+#endif
 
 typedef enum {ERROR=-1, OK=0} status;
 
