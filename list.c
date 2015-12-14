@@ -51,13 +51,17 @@ char *pop(node **head) {
   return ret;
 }
 
-void printList(node *head) {
+int printList(node *head) {
+  if (head == NULL) {
+    return -1;
+  }
   node *curr = head;
   while (curr->next != NULL) {
     printf("[%s]\t", curr->el);
     curr = curr->next;
   }
   printf("[%s]\n", curr->el);
+  return 0;
 }
 
 void freeList(node *head) {
@@ -75,7 +79,7 @@ void freeList(node *head) {
 }
 
 int main() {
-  node *head = push(NULL, "abba");
+  node *head = push(NULL, "String0");
   printList(head);
   int i;
   char text[] = "String1";
