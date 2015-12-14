@@ -5,8 +5,9 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
 ERROR	list/list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	e	enum:__anon1
+HEADERS	list/Makefile	/^HEADERS = list.h$/;"	m
 LIST_H	list/list.h	/^#define LIST_H$/;"	d
-MAX_EL	list/list.h	/^#define MAX_EL /;"	d
+MAX_EL	list/list.c	/^#define MAX_EL /;"	d	file:
 OK	list/list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	e	enum:__anon1
 STRING_SIZE	list/list.h	/^#define STRING_SIZE /;"	d
 _node	list/list.h	/^typedef struct _node {$/;"	s
