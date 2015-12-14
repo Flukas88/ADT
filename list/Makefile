@@ -3,6 +3,6 @@ HEADERS = list.h
 default: list 
 
 list: list.c $(HEADERS)
-	gcc list.c -o list 
+	gcc list.c -o list.o 
 clean:
-	-rm -f list 
+	-rm -f list.o
