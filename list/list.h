@@ -6,7 +6,7 @@
 #include <string.h>
 #ifndef BIG_STRING        /* Allow "cc -D" to override definition */
 #define STRING_SIZE 10 
-#elif
+#else
 #define STRING_SIZE 5
 #endif
 
