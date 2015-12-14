@@ -1,7 +1,8 @@
-# build an executable named myprog from myprog.c
+HEADERS = list.h
 
-all: list.c 
-	gcc -g -Wall -o list list.c
+default: list 
 
-clean: 
-	$(RM) list  
+list: list.c $(HEADERS)
+	gcc list.c -o list 
+clean:
+	-rm -f list 
