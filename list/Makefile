@@ -1,6 +1,6 @@
 HEADERS = list.h
 
-default: list 
+all: list 
 
 list: list.c $(HEADERS)
 	gcc list.c -o list.o 
