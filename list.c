@@ -82,9 +82,8 @@ int main() {
   char first_element[] = "String0";
   node *head = push(NULL, first_element);
   printList(head);
-  int i;
   char text[] = "String1";
-  for (i = 1; i < MAX_EL; i++) {
+  for (int i = 1; i < MAX_EL; i++) {
     text[6] = i + '0';
     push(head, text);
     printList(head);
