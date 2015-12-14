@@ -1,8 +1,8 @@
 HEADERS = list.h
 
-all: list 
+all: list.o
 
-list: list.c $(HEADERS)
+list.o: list.c $(HEADERS)
 	gcc list.c -o list.o 
 clean:
 	-rm -f list.o
