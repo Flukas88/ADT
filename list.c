@@ -11,7 +11,7 @@ typedef struct _node {
 
 node *push(node *head, char *el) {
   if (head == NULL) {
-    node *first = malloc(sizeof(struct _node));
+    node *first = (node *)malloc(sizeof(struct _node));
     first->el = (char *)malloc(STRING_SIZE * sizeof(char));
     strcpy(first->el, el);
     first->next = NULL;
@@ -24,7 +24,7 @@ node *push(node *head, char *el) {
   while ((curr->next != NULL) && (curr != NULL)) {
     curr = curr->next;
   }
-  node *tmp = malloc(sizeof(struct _node));
+  node *tmp = (node *)malloc(sizeof(struct _node));
   tmp->el = (char *)malloc(STRING_SIZE * sizeof(char));
   strcpy(tmp->el, el);
   tmp->next = NULL;
@@ -79,7 +79,8 @@ void freeList(node *head) {
 }
 
 int main() {
-  node *head = push(NULL, "String0");
+  char first_element[] = "String0";
+  node *head = push(NULL, first_element);
   printList(head);
   int i;
   char text[] = "String1";
@@ -93,14 +94,8 @@ int main() {
 #endif
   char *n = (char *)malloc(STRING_SIZE * sizeof(char));
   strcpy(n, pop(&head));
-#ifdef DEBUG
-  printf("\nPop(ed) [%s]\n", n);
-#endif
   printList(head);
   strcpy(n, pop(&head));
-#ifdef DEBUG
-  printf("\nPop(ed) [%s]\n", n);
-#endif
   printList(head);
 #ifdef DEBUG
   printf("\nStarts freeing \n\n");
