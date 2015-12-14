@@ -4,18 +4,18 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ERROR	list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	e	enum:__anon1
-LIST_H	list.h	/^#define LIST_H$/;"	d
-MAX_EL	list.h	/^#define MAX_EL /;"	d
-OK	list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	e	enum:__anon1
-STRING_SIZE	list.h	/^#define STRING_SIZE /;"	d
-_node	list.h	/^typedef struct _node {$/;"	s
-el	list.h	/^  char *el;$/;"	m	struct:_node
-freeList	list.h	/^void freeList(node *head) {$/;"	f
-main	list.c	/^int main() {$/;"	f
-next	list.h	/^  struct _node *next;$/;"	m	struct:_node	typeref:struct:_node::_node
-node	list.h	/^} node;$/;"	t	typeref:struct:_node
-pop	list.h	/^char *pop(node **head) {$/;"	f
-printList	list.h	/^int printList(node *head) {$/;"	f
-push	list.h	/^node *push(node *head, char *el) {$/;"	f
-status	list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	t	typeref:enum:__anon1
+ERROR	list/list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	e	enum:__anon1
+LIST_H	list/list.h	/^#define LIST_H$/;"	d
+MAX_EL	list/list.h	/^#define MAX_EL /;"	d
+OK	list/list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	e	enum:__anon1
+STRING_SIZE	list/list.h	/^#define STRING_SIZE /;"	d
+_node	list/list.h	/^typedef struct _node {$/;"	s
+el	list/list.h	/^  char *el;$/;"	m	struct:_node
+freeList	list/list.h	/^void freeList(node *head) {$/;"	f
+main	list/list.c	/^int main() {$/;"	f
+next	list/list.h	/^  struct _node *next;$/;"	m	struct:_node	typeref:struct:_node::_node
+node	list/list.h	/^} node;$/;"	t	typeref:struct:_node
+pop	list/list.h	/^char *pop(node **head) {$/;"	f
+printList	list/list.h	/^int printList(node *head) {$/;"	f
+push	list/list.h	/^node *push(node *head, char *el) {$/;"	f
+status	list/list.h	/^typedef enum {ERROR=-1, OK=0} status;$/;"	t	typeref:enum:__anon1
