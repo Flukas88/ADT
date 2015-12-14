@@ -1,4 +1,4 @@
-*.dSYM/*
 list
 listC
 *.swp
+*.ghc
