@@ -4,6 +4,8 @@
 #define MAX_EL 5
 #define STRING_SIZE 6
 
+typedef enum {ERROR=-1, OK=0} status;
+
 typedef struct _node {
   struct _node *next;
   char *el;
@@ -53,7 +55,7 @@ char *pop(node **head) {
 
 int printList(node *head) {
   if (head == NULL) {
-    return -1;
+    return ERROR;
   }
   node *curr = head;
   while (curr->next != NULL) {
@@ -61,7 +63,7 @@ int printList(node *head) {
     curr = curr->next;
   }
   printf("[%s]\n", curr->el);
-  return 0;
+  return OK;
 }
 
 void freeList(node *head) {
@@ -101,5 +103,5 @@ int main() {
 #endif
   free(n);
   freeList(head);
-  return 0;
+  return OK;
 }

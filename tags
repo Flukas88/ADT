@@ -13,5 +13,5 @@ main	list.c	/^int main() {$/;"	f
 next	list.c	/^  struct _node *next;$/;"	m	struct:_node	typeref:struct:_node::_node	file:
 node	list.c	/^} node;$/;"	t	typeref:struct:_node	file:
 pop	list.c	/^char *pop(node **head) {$/;"	f
-printList	list.c	/^void printList(node *head) {$/;"	f
+printList	list.c	/^int printList(node *head) {$/;"	f
 push	list.c	/^node *push(node *head, char *el) {$/;"	f
