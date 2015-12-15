@@ -4,13 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#ifndef BIG_STRING /* Allow "cc -D" to override definition */
-#define STRING_SIZE 10
+#ifndef BIG_STRING        /* Allow "cc -D" to override definition */
+#define STRING_SIZE 10 
 #else
 #define STRING_SIZE 5
 #endif
 
-typedef enum { ERROR = -1, OK = 0 } status;
+typedef enum {ERROR=-1, OK=0} status;
 
 typedef struct _node {
   struct _node *next;
@@ -48,9 +48,6 @@ char *pop(node **head) {
     return NULL;
   }
   node *curr = (*head);
-  if (curr->next == NULL) {
-    return NULL;
-  }
   char *ret = (char *)malloc(STRING_SIZE * sizeof(char));
 #ifdef DEBUG
   printf("Popping element [%s] \n", curr->el);
