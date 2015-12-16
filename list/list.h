@@ -38,7 +38,7 @@ node *push(node *head, char *el) {
   tmp->next = NULL;
   curr->next = tmp;
 #ifdef DEBUG
-  printf("Element [%s] added\n", el);
+  printf("Pushing element [%s]\n", el);
 #endif
   return curr;
 }
