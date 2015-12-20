@@ -19,8 +19,8 @@ typedef struct _node {
 
 node *push(node *head, char *el) {
   if (head == NULL) {
-    node *first = malloc(sizeof(struct _node));
-    first->el = malloc(STRING_SIZE * sizeof(char));
+    node *first = calloc(sizeof(struct _node), 1);
+    first->el = calloc(sizeof(char), STRING_SIZE);
     strcpy(first->el, el);
     first->next = NULL;
 #ifdef DEBUG
@@ -32,8 +32,8 @@ node *push(node *head, char *el) {
   while ((curr->next != NULL) && (curr != NULL)) {
     curr = curr->next;
   }
-  node *tmp = malloc(sizeof(struct _node));
-  tmp->el = malloc(STRING_SIZE * sizeof(char));
+  node *tmp = calloc(sizeof(struct _node), 1);
+  tmp->el = calloc(sizeof(char),STRING_SIZE);
   strcpy(tmp->el, el);
   tmp->next = NULL;
   curr->next = tmp;
@@ -48,7 +48,7 @@ char *pop(node **head) {
     return NULL;
   }
   node *curr = (*head);
-  char *ret = malloc(STRING_SIZE * sizeof(char));
+  char *ret = calloc(sizeof(char),STRING_SIZE);
 #ifdef DEBUG
   printf("Popping element [%s] \n", curr->el);
 #endif
