@@ -17,7 +17,7 @@ int main() {
 #ifdef DEBUG
   printf("\nStarts with pop(ing)\n\n");
 #endif
-  char *n = (char *)malloc(STRING_SIZE * sizeof(char));
+  char *n = malloc(STRING_SIZE * sizeof(char));
   strcpy(n, pop(&head));
   printList(head);
   strcpy(n, pop(&head));
