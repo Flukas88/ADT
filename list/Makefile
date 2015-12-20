@@ -6,7 +6,7 @@ list.o: list.c $(HEADERS)
 	gcc -std=c11 list.c -o list.o 
 
 list_big.o: list.c $(HEADERS)
-	gcc -std=c11 -DBIG_STRING list.c -o list_big.o 
+	gcc -std=c11 -DMAX_EL=10 -DBIG_STRING list.c -o list_big.o 
 
 clean:
 	-rm -f list.o list_big.o
