@@ -12,14 +12,8 @@ int main() {
   printList(head);
   char text[] = "String01";
   for (int i = 1; i < MAX_EL; i++) {
-    if (i < 10) { 
-      text[7] = i + '0';
-    }
-    else
-    {
-      text[6] = (i/10) + '0';
-      text[7] = (i%10) + '0';
-    }
+    text[6] = (i/10) + '0';
+    text[7] = (i%10) + '0';
     push(head, text);
     printList(head);
   }
