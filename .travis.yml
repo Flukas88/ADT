@@ -8,4 +8,6 @@ before_install:
 
 install:
   - sudo apt-get install -y gcc-5
+
+script:
   - cd list && make
