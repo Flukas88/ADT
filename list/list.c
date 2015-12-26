@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "list.h"
-#ifndef MAX_EL        /* Allow "cc -D" to override definition */
+#ifndef MAX_EL        
 #define MAX_EL 5
 #endif
 
