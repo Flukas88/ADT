@@ -9,6 +9,6 @@ list_big.o: list.c $(HEADERS)
 	gcc -std=c99 -DMAX_EL=10 -DBIG_STRING list.c -o list_big.o 
 
 ctags: 
-	ctags -R .
+	ctags -R *
 clean:
 	-rm -f list.o list_big.o
