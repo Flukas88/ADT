@@ -19,8 +19,8 @@ typedef struct _node {
 
 node *push(node *head, char *el) {
   if (head == NULL) {
-    node *first = calloc(sizeof(struct _node), 1);
-    first->el = calloc(sizeof(char), STRING_SIZE);
+    node *first = calloc(1, sizeof(struct _node));
+    first->el = calloc(STRING_SIZE, sizeof(char));
     strcpy(first->el, el);
     first->next = NULL;
 #ifdef DEBUG
@@ -32,7 +32,7 @@ node *push(node *head, char *el) {
   while ((curr->next != NULL) && (curr != NULL)) {
     curr = curr->next;
   }
-  node *tmp = calloc(sizeof(struct _node), 1);
+  node *tmp = calloc(1, sizeof(struct _node));
   tmp->el = calloc(sizeof(char),STRING_SIZE);
   strcpy(tmp->el, el);
   tmp->next = NULL;
