@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#ifndef BIG_STRING        /* Allow "cc -D" to override definition */
+#ifndef BIG_STRING       
 #define STRING_SIZE 10 
 #else
 #define STRING_SIZE 5
@@ -33,7 +33,7 @@ node *push(node *head, char *el) {
     curr = curr->next;
   }
   node *tmp = calloc(1, sizeof(struct _node));
-  tmp->el = calloc(sizeof(char),STRING_SIZE);
+  tmp->el = calloc(STRING_SIZE,sizeof(char));
   strcpy(tmp->el, el);
   tmp->next = NULL;
   curr->next = tmp;
@@ -48,7 +48,7 @@ char *pop(node **head) {
     return NULL;
   }
   node *curr = (*head);
-  char *ret = calloc(sizeof(char),STRING_SIZE);
+  char *ret = calloc(STRING_SIZE, sizeof(char));
 #ifdef DEBUG
   printf("Popping element [%s] \n", curr->el);
 #endif
