@@ -20,7 +20,7 @@ int main() {
 #ifdef DEBUG
   printf("\nStarts with pop(ing)\n\n");
 #endif
-  char *n = calloc(sizeof(char), STRING_SIZE);
+  char *n = calloc(STRING_SIZE, sizeof(char));
   strcpy(n, pop(&head));
   printList(head);
   strcpy(n, pop(&head));
