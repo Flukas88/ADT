@@ -11,3 +11,4 @@ install:
 
 script:
   - cd list && make
+  - ./list.o
