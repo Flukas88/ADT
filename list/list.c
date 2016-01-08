@@ -11,7 +11,7 @@ int main() {
   node *head = push(NULL, first_element);
   printList(head);
   char text[] = "String01";
-  for (uint32_t i = 1; i < MAX_EL; i++) {
+  for (int i = 1; i < MAX_EL; i++) {
     text[6] = (i/10) + '0';
     text[7] = (i%10) + '0';
     push(head, text);
