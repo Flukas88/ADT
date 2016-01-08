@@ -3,10 +3,10 @@ HEADERS = list.h
 all: list.o list_big.o ctags
 
 list.o: list.c $(HEADERS)
-	gcc -std=gnu99 list.c -o list.o 
+	gcc -std=gnu99 -g list.c -o list.o 
 
 list_big.o: list.c $(HEADERS)
-	gcc -std=gnu99 -DMAX_EL=10 -DBIG_STRING list.c -o list_big.o 
+	gcc -std=gnu99 -g -DMAX_EL=10 -DBIG_STRING list.c -o list_big.o 
 
 ctags: 
 	ctags -R *
