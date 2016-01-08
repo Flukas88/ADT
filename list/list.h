@@ -1,5 +1,4 @@
-#ifndef LIST_H
-#define LIST_H
+#pragma once
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -85,4 +84,3 @@ void freeList(node *head) {
     free(tmp);
   }
 }
-#endif
