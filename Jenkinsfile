@@ -1,13 +1,10 @@
 node (''){
 
 stage 'Compile'
-    sh 'ls -la'
+    sh 'ls -la && cd list && ls -la'
   
 stage 'Test'
-  
-  dir('list') {
-    sh './list.o'
-  }
+    sh 'true'
   
 
 }
