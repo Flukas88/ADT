@@ -1,9 +1,9 @@
 node (''){
 
 stage 'Compile'
-    sh 'cd list && make'
-  
-  
+    dir('list') {
+    sh 'ls -la'
+  }
   
 stage 'Test'
   
