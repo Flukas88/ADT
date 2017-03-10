@@ -1,10 +1,10 @@
 node (''){
 
-stage 'Compile':
+stage 'Compile'
   cd list
   make
   
-stage 'Test':
+stage 'Test'
   ./list.o
 
 }
