@@ -1,9 +1,18 @@
 node (''){
 
 stage 'Compile'
-  sh 'cd list && make'
+  
+  dir('list') {
+    sh 'make'
+  }
+  
+  
   
 stage 'Test'
-  sh './list.o'
+  
+  dir('list') {
+    sh './list.o'
+  }
+  
 
 }
