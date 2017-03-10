@@ -3,7 +3,7 @@ node (''){
 stage 'Compile'
   
   dir('list') {
-    sh 'make'
+    sh 'echo make'
   }
   
   
@@ -11,7 +11,7 @@ stage 'Compile'
 stage 'Test'
   
   dir('list') {
-    sh './list.o'
+    sh 'ls'
   }
   
 
